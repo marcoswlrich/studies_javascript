@@ -64,6 +64,7 @@ while (count <= 5) {
     count++;
 }   
 */
+/*
 var count;
 for(count = 1; count <= 5; count++){
     console.log(count);
@@ -75,6 +76,62 @@ alert(d.getDay());
 alert(d.getHours());
 alert(d.getMinutes());
 alert(d.getMonth()+1);
+
+*/
+
+function retornasexo(sexo) {
+
+    if (sexo == "M") {
+        return 'Masculino'; 
+    }else if (sexo == 'F') {
+        return 'Feminino';
+
+    }else {
+        return 'outro';
+    }
+}
  
+var resultado = retornasexo('M');
+console.log(resultado);
+
+//Se tiver muitas condiçoes usar esse modo
+
+function retornasexo(sexo) {
+    switch (sexo){
+        case 'M':
+            return 'Masculino';
+        case 'F':
+            return 'Feminino';
+        default:
+            return 'Outro';
 
 
+    }
+}
+
+var resultado = retornasexo('F');
+console.log(resultado);
+
+//OPERADORES LÓGICOS
+// AND --> &&, OR --> ||, NOT --> !==
+
+var sexo = 'M', idade = 23;
+if (sexo === 'M' && idade >= 18) {
+    console.log('OK')
+}
+
+//Condição Tenária
+
+var sexo = 'M';
+
+var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+console.log(retorno);
+
+// INTERVALO E TIMEOUT
+
+function exibeAlgo() {
+console.log('Hello Word');
+}
+
+setInterval(exibeAlgo, 1000);
+setTimeout(exibeAlgo, 5000);
